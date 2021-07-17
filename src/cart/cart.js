@@ -68,7 +68,7 @@ function Cart() {
 			>
 				<header>
 					<div className="nav-container">
-						<h1>UseReducer</h1>
+						<h1>Simple cart shop</h1>
 						<div className="cart-container">
 							<span className="cart-icon">
 								<FaShoppingCart size="1.2rem" />

@@ -2,7 +2,7 @@ import React from "react";
 import ReactDom from "react-dom";
 import App from "./app";
 
-import "./cocktail/index.css";
+import "./cart/index.css";
 
 const FinalProject = () => {
 	return (

@@ -5,7 +5,7 @@ export const useFetch = ({ items, url }) => {
 	const [isLoaded, setIsLoaded] = useState(false);
 	let [getItems, setGetItems] = useState(items);
 	const [totalItems, setTotalItems] = useState(5);
-	let [totalPrice, setTotalPrice] = useState(899.23);
+	let [totalPrice, setTotalPrice] = useState(1261.21);
 
 	// getItems
 	const shoppingItems = async () => {
@@ -14,7 +14,7 @@ export const useFetch = ({ items, url }) => {
 		if (data) {
 			setIsLoaded(true);
 			setIsLoading(false);
-			getItems = data.slice(0, 5);
+			getItems = data.slice(0, 10);
 			setGetItems(getItems);
 		}
 	};
