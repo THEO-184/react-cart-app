@@ -4,7 +4,7 @@ export const useFetch = ({ items, url }) => {
 	const [isLoading, setIsLoading] = useState(true);
 	const [isLoaded, setIsLoaded] = useState(false);
 	let [getItems, setGetItems] = useState(items);
-	const [totalItems, setTotalItems] = useState(5);
+	const [totalItems, setTotalItems] = useState(10);
 	let [totalPrice, setTotalPrice] = useState(1261.21);
 
 	// getItems
