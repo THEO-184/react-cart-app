@@ -1,7 +1,8 @@
 // import it at index.js
 
 import React from "react";
-import Setup from "./cart/cart"
+
+import Setup from "./cart";
 
 const App = () => {
 	return (
