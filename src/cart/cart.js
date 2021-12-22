@@ -1,8 +1,11 @@
 import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 import { MdKeyboardArrowUp, MdKeyboardArrowDown } from "react-icons/md";
 import { useFetch } from "./useFetch";
 console.clear();
+export var URL;
+export var describeItem;
 // reducer function
 let url = "https://fakestoreapi.com/products";
 
@@ -116,7 +119,10 @@ function Cart() {
 
 // ITEM COMPONENT
 
-const ItemContainer = ({ image, price, title, id }) => {
+const ItemContainer = ({ image, price, title, id, description }) => {
+	URL = image.slice(6);
+	describeItem = description;
+
 	const {
 		handleDecrease,
 		handleIncrease,
@@ -136,6 +142,7 @@ const ItemContainer = ({ image, price, title, id }) => {
 		setTotalPrice(totalPrice + price);
 	};
 
+
 	// DECREASE ITEMS
 	const getDecreaseItems = (e) => {
 		if (itemsNumber <= 1) {
@@ -147,13 +154,14 @@ const ItemContainer = ({ image, price, title, id }) => {
 		}
 	};
 
+
 	// DELETE ITEMS
 	const deleteItem = (id) => {
 		let newItems = getItems.filter((item) => item.id !== id);
 		setGetItems(newItems);
 		setTotalItems(totalItems - 1);
 	};
-
+	
 	return (
 		<div className="item-container">
 			<div className="item">

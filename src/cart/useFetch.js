@@ -12,6 +12,7 @@ export const useFetch = ({ items, url }) => {
 		const res = await fetch(url);
 		const data = await res.json();
 		if (data) {
+			console.log(data);
 			setIsLoaded(true);
 			setIsLoading(false);
 			getItems = data.slice(0, 10);
@@ -34,4 +35,3 @@ export const useFetch = ({ items, url }) => {
 	};
 };
 
-// https://fakestoreapi.com/products
